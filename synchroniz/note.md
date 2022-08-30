@@ -43,6 +43,7 @@
 * 主动休眠
     1. ```std::this_thread::sleep_until()```
     2. ```std::this_thread::sleep_for()```
+    3. ```std::this_thread:: yield()```让出时间片
 
 * 超时（4.3.4）
 
