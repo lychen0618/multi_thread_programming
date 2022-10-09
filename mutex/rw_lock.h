@@ -42,7 +42,7 @@ public:
             --ref_count;
         else
             ref_count = 0;
-        if (writer_num == 0 && ref_count > 0)
+        if (writer_num == 0 && reader_num > 0)
             reader_cond.notify_all();
         else if (writer_num != 0 && ref_count == 0)
             writer_cond.notify_one();
